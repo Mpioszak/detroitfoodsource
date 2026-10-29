@@ -22,7 +22,7 @@ A map of where Metro Detroit's food comes from: urban farms, orchards, dairies, 
 | Column | Example | Notes |
 |---|---|---|
 | `name` | `Eastern Market` | |
-| `type` | `Market` | Sets the dot color. Built-in types: Urban farm, Farm, Dairy, Market, Wholesale, Food rescue, Growing region, Port of entry. A new type works too and shows in gray. |
+| `type` | `Market` | Sets the dot color. Built-in types: Urban farm, Farm, Dairy, Meat, Market, Wholesale, Food rescue, Growing region, Port of entry. A new type works too and shows in gray. |
 | `scope` | `Metro Detroit` | `Metro Detroit`, `Michigan`, or `Beyond Michigan`. Anything outside Metro Detroit gets a line drawn to Detroit. |
 | `lat`, `lng` | `42.3477`, `-83.0418` | In Google Maps, right-click a spot and click the numbers to copy them. |
 | `place` | `Royal Oak` | Town or area shown under the name. |

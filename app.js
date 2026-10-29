@@ -10,6 +10,7 @@
     "Urban farm": "#2b8a3e",
     "Farm": "#e67700",
     "Dairy": "#1c7ed6",
+    "Meat": "#c92a2a",
     "Market": "#c2255c",
     "Wholesale": "#6741d9",
     "Food rescue": "#0c8599",
