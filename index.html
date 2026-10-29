@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Detroit Food Source</title>
+  <meta name="description" content="A map of where Metro Detroit's food comes from: local farms, markets, Michigan growing regions, and sources from farther away.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥕</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div>
+      <h1>Detroit Food Source</h1>
+      <p class="tagline">Where Metro Detroit's food comes from, from neighborhood farms to fields thousands of miles away.</p>
+    </div>
+    <p class="updated" id="updated"></p>
+  </header>
+
+  <main class="layout">
+    <aside class="panel" aria-label="Filters and list of food sources">
+      <div class="panel-section">
+        <label class="visually-hidden" for="search">Search</label>
+        <input id="search" type="search" placeholder="Search a place or food, e.g. apples" autocomplete="off">
+      </div>
+
+      <div class="panel-section">
+        <h2>View</h2>
+        <div class="segmented" role="group" aria-label="Map view">
+          <button type="button" data-view="Metro Detroit" aria-pressed="true">Metro Detroit</button>
+          <button type="button" data-view="Michigan" aria-pressed="false">Michigan</button>
+          <button type="button" data-view="All" aria-pressed="false">Everywhere</button>
+        </div>
+      </div>
+
+      <div class="panel-section">
+        <h2>Show</h2>
+        <div id="type-filters" class="chips"></div>
+        <label class="toggle">
+          <input type="checkbox" id="in-season">
+          <span>Only what's in season in <strong id="month-name"></strong></span>
+        </label>
+      </div>
+
+      <div class="panel-section list-section">
+        <h2><span id="result-count"></span></h2>
+        <ul id="list" class="source-list"></ul>
+      </div>
+    </aside>
+
+    <div id="map" class="map" role="region" aria-label="Map of food sources"></div>
+  </main>
+
+  <footer class="site-footer">
+    <p>Locations are approximate. Lines show food travelling from farther away into Detroit. Spot something wrong or missing? <a href="https://github.com/Mpioszak/detroitfoodsource/issues">Let us know</a>.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
